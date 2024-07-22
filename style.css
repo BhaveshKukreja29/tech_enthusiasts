@@ -24,6 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .right-container {
@@ -32,7 +33,7 @@ body {
 }
 
 .h1 {
-    margin: 30;
+    margin: 30px;
 }
 
 .content {
@@ -57,9 +58,33 @@ a:hover {
     color: #ff6699;
 }
 
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-@media (max-width: 515){
-    .section{
-        font-size: 1.5rem;
+    .section {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 515px) {
+    .section {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .h1 {
+        margin: 20px;
+    }
+
+    .content {
+        align-items: center;
     }
 }
